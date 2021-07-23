@@ -1,1 +1,10 @@
+# JPA
+spring:
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: create-drop
 
+# ToDo JMS
+todo:
+  jms:
+    destination: toDoDestination
