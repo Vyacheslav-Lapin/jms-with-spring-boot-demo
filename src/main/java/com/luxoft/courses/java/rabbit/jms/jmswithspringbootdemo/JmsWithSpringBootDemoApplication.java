@@ -17,8 +17,8 @@ public class JmsWithSpringBootDemoApplication {
   }
 
   @Bean
-  public CommandLineRunner sendToDos(@Value("${todo.jms.destination}") String destination,
-                                     ToDoProducer producer) {
+  CommandLineRunner sendToDos(@Value("${todo.jms.destination}") String destination,
+                              ToDoProducer producer) {
     return __ ->
                producer.sendTo(destination,
                    new ToDo("workout tomorrow morning!"));
